@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1274fe1-b5e8-4cd4-aae4-1f13d89ae46d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/keras-practice-two.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Autoencoder_and_Classifier/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Autoencoder_and_Classifier/classifer0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Autoencoder_and_Classifier/classifier1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deep_simple_autoencoder_one.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designing_a_neural_net.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designing_an_autoencoder0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keras_mnist_tutorial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keras_tutorial_one.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning_tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mnist_convolutional_neural_network.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pima-indians-diabetes.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/revised_deep_autoencoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simple_autoencoder_one.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_and_classifer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Autoencoder_and_Classifier/keras_mnist.h5" beforeDir="false" afterPath="$PROJECT_DIR$/Autoencoder_and_Classifier/keras_mnist.h5" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,15 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="keras_tutorial_one.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keras_tutorial_one.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="keras_mnist_tutorial.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/keras_mnist_tutorial.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,8 +31,8 @@
       <file leaf-file-name="deep_simple_autoencoder_one.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/deep_simple_autoencoder_one.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="72" selection-start-line="72" selection-end-line="74" />
+            <state relative-caret-position="232">
+              <caret line="71" selection-end-line="97" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -88,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classifier1.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="classifier1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Autoencoder_and_Classifier/classifier1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="86" column="44" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+            <state relative-caret-position="214">
+              <caret line="117" selection-end-line="160" selection-end-column="10" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -100,13 +78,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mnist_convolutional_neural_network.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mnist_convolutional_neural_network.py">
+      <file leaf-file-name="autoencoder_and_classifer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_and_classifer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
-                <element signature="e#59#71#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,8 +93,20 @@
       <file leaf-file-name="designing_an_autoencoder0.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/designing_an_autoencoder0.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1155">
-              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+            <state relative-caret-position="-278">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="autoencoder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -148,7 +138,12 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>decoder</find>
+      <find>x_test</find>
     </findStrings>
+    <replaceStrings>
+      <replace>X_train</replace>
+      <replace>X_test</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -171,14 +166,16 @@
         <option value="$PROJECT_DIR$/designing_an_autoencoder0.py" />
         <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/classifer0.py" />
         <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/classifier1.py" />
+        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder.py" />
+        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_and_classifer.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="697" />
+    <option name="x" value="10" />
     <option name="y" value="23" />
-    <option name="width" value="725" />
-    <option name="height" value="825" />
+    <option name="width" value="1366" />
+    <option name="height" value="816" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -223,7 +220,43 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.classifier1">
+  <component name="RunManager" selected="Python.autoencoder_and_classifer">
+    <configuration name="autoencoder" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="keras-practice-two" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Autoencoder_and_Classifier" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="autoencoder_and_classifer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="keras-practice-two" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Autoencoder_and_Classifier" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_and_classifer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="classifer0" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras-practice-two" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -260,24 +293,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="designing_a_neural_net" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="keras-practice-two" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/designing_a_neural_net.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="designing_an_autoencoder0" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="keras-practice-two" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -296,38 +311,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="learning_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="keras-practice-two" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/learning_tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list>
-      <item itemvalue="Python.learning_tests" />
       <item itemvalue="Python.designing_an_autoencoder0" />
-      <item itemvalue="Python.designing_a_neural_net" />
       <item itemvalue="Python.classifer0" />
       <item itemvalue="Python.classifier1" />
+      <item itemvalue="Python.autoencoder" />
+      <item itemvalue="Python.autoencoder_and_classifer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.autoencoder_and_classifer" />
+        <item itemvalue="Python.autoencoder" />
         <item itemvalue="Python.classifier1" />
         <item itemvalue="Python.designing_an_autoencoder0" />
         <item itemvalue="Python.classifer0" />
-        <item itemvalue="Python.designing_a_neural_net" />
-        <item itemvalue="Python.learning_tests" />
       </list>
     </recent_temporary>
   </component>
@@ -345,13 +342,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="697" y="23" width="725" height="825" extended-state="0" />
+    <frame x="10" y="23" width="1366" height="816" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" weight="0.5653105" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.5638889" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.34886816" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.35309973" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -368,9 +365,9 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.34886816" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.34979972" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.5653105" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.5638889" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -388,6 +385,17 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder.py</url>
+          <line>79</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/simple_autoencoder_one.py">
@@ -457,16 +465,6 @@
     <entry file="file://$PROJECT_DIR$/Autoencoder_and_Classifier/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnist_convolutional_neural_network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#59#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/designing_a_neural_net.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -477,10 +475,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mnist_convolutional_neural_network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#59#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/deep_simple_autoencoder_one.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="72" selection-start-line="72" selection-end-line="74" />
+        <state relative-caret-position="232">
+          <caret line="71" selection-end-line="97" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designing_an_autoencoder0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-278">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -494,10 +512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/designing_an_autoencoder0.py">
+    <entry file="file://$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
+        <state relative-caret-position="96">
+          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -506,10 +524,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Autoencoder_and_Classifier/classifier1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="86" column="44" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
+        <state relative-caret-position="214">
+          <caret line="117" selection-end-line="160" selection-end-column="10" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_and_classifer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
