@@ -8,4 +8,4 @@ from keras.layers import Flatten
 from keras.layers.convolutional import Conv2D
 from keras.layers.convolutional import MaxPooling2D
 
-https://machinelearningmastery.com/handwritten-digit-recognition-using-convolutional-neural-networks-python-keras/
+#https://machinelearningmastery.com/handwritten-digit-recognition-using-convolutional-neural-networks-python-keras/

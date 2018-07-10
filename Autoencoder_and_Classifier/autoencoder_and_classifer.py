@@ -8,99 +8,106 @@ from keras.datasets import mnist
 import numpy as np
 
 alpha = 1
+beta = 1
 
-if alpha !=0:
-    #
-    #AUTOENCODER
-    #
-    #this is the size of our encoded representations
-    encoding_dim = 32 #32 floats--> compression of factor 24.5, assuming the input is 784 floats
+epochs_a = 100
+#
+#AUTOENCODER
+#
+#this is the size of our encoded representations
+encoding_dim = 32 #32 floats--> compression of factor 24.5, assuming the input is 784 floats
 
-    #this is our input placeholder
-    input_img = Input(shape=(784,))
+#this is our input placeholder
+input_img = Input(shape=(784,))
 
-    #DENSE LAYERS
-    encoded = Dense(128, activation='relu')(input_img)
-    encoded = Dense(64, activation='relu')(encoded)
-    encoded = Dense(32, activation='relu')(encoded)
+#DENSE LAYERS
+encoded = Dense(128, activation='relu')(input_img)
+encoded = Dense(64, activation='relu')(encoded)
+encoded = Dense(32, activation='relu')(encoded)
 
-    decoded = Dense(64, activation='relu')(encoded)
-    decoded = Dense(128, activation='relu')(decoded)
-    decoded = Dense(784, activation = 'sigmoid')(decoded)
+decoded = Dense(64, activation='relu')(encoded)
+decoded = Dense(128, activation='relu')(decoded)
+decoded = Dense(784, activation = 'sigmoid')(decoded)
 
-    #this model maps an input to its reconstruction
-    autoencoder = Model(input_img, decoded)
+#this model maps an input to its reconstruction
+autoencoder = Model(input_img, decoded)
 
-    #encoder model
-    #this model maps an input to its encoded representation
-    encoder = Model(input_img, encoded)
-
-
-    encoded_input = Input(shape=(encoding_dim,))
-
-    deco = autoencoder.layers[-3](encoded_input)
-    deco = autoencoder.layers[-2](deco)
-    deco = autoencoder.layers[-1](deco)
-    # create the decoder model
-    decoder = Model(encoded_input, deco)
-
-    #autoencoder.compile(optimizer='adadelta', loss='mean_squared_error')
-    autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy', metrics = ['accuracy'])
+#encoder model
+#this model maps an input to its encoded representation
+encoder = Model(input_img, encoded)
 
 
+encoded_input = Input(shape=(encoding_dim,))
 
-    (X_train, y_train), (X_test, y_test) = mnist.load_data()
+deco = autoencoder.layers[-3](encoded_input)
+deco = autoencoder.layers[-2](deco)
+deco = autoencoder.layers[-1](deco)
+# create the decoder model
+decoder = Model(encoded_input, deco)
 
-    #normalizing all values between 0 and 1 and we will flatten the 28x28 images into vectors of size 784
-    X_train = X_train.astype('float32')/255
-    X_test = X_test.astype('float32') / 255
-    X_train = X_train.reshape((len(X_train)), np.prod(X_train.shape[1:]))
-    X_test = X_test.reshape((len(X_test)), np.prod(X_test.shape[1:]))
-    print X_train.shape
-    print X_test.shape
-
-    autoencoder.fit(X_train, X_train,
-                    epochs=50,
-                    batch_size=256,
-                    shuffle=True,
-                    verbose=2,
-                    validation_data=(X_test, X_test))
+#autoencoder.compile(optimizer='adadelta', loss='mean_squared_error')
+autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy', metrics = ['accuracy'])
 
 
+(X_train, y_train), (X_test, y_test) = mnist.load_data()
+
+#normalizing all values between 0 and 1 and we will flatten the 28x28 images into vectors of size 784
+X_train = X_train.astype('float32')/255
+X_test = X_test.astype('float32') / 255
+X_train = X_train.reshape((len(X_train)), np.prod(X_train.shape[1:]))
+X_test = X_test.reshape((len(X_test)), np.prod(X_test.shape[1:]))
+print X_train.shape
+print X_test.shape
 
 
-
-
-    autoencoder_train = autoencoder.fit(X_train, X_train,
-                    epochs=10,
-                    batch_size=256,
-                    shuffle=True,
-                    verbose=2,
-                    validation_data=(X_test, X_test))
-
-    epochs=10
+autoencoder_train = autoencoder.fit(X_train, X_train,
+                epochs=epochs_a,
+                batch_size=256,
+                shuffle=True,
+                verbose=2,
+                validation_data=(X_test, X_test))
+if beta == 0:
     loss = autoencoder_train.history['loss']
     val_loss = autoencoder_train.history['val_loss']
-    epochs = range(epochs)
+    epochs = range(epochs_a)
     alpha = 1
     plt.figure()
-    #plt.plot(epochs, (loss * alpha), 'bo', label='Training loss')
     plt.plot(epochs, (val_loss * alpha), 'b', label='Validation loss')
     plt.title('Training and validation loss')
     plt.legend()
-    plt.show()
+    plt.show(block=False)
 
 
-    #visualize reconstructed inputs and the encoded representations
-    #encoded and decode some digits
-    #note that we take them from the TEST set
-    encoded_imgs = encoder.predict(X_test)
-    decoded_imgs = decoder.predict(encoded_imgs)
+#visualize reconstructed inputs and the encoded representations
+#encoded and decode some digits
+#note that we take them from the TEST set
+encoded_imgs = encoder.predict(X_test)
+decoded_imgs = decoder.predict(encoded_imgs)
+
+n = 10  # how many digits we will display
+plt.figure(figsize=(20, 4))
+
+for i in range(n):
+    # display original
+    ax = plt.subplot(2, n, i + 1)
+    plt.imshow(X_test[i].reshape(28, 28))
+    plt.gray()
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
+
+    # display reconstruction
+    ax = plt.subplot(2, n, i + 1 + n)
+    plt.imshow(decoded_imgs[i].reshape(28, 28))
+    plt.gray()
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
+
+plt.show()
 
 
 
 #CLASSIFIER
-beta = 1
+
 
 import os
 os.environ['CUDA_VISIBLE_DEVICES']=''
@@ -112,6 +119,12 @@ from keras.utils import np_utils
 
 #PREPARING CLASSIFER INPUT DATA: input is decoded images from autoencoder
 if beta != 0:
+    epochs_b = 100
+
+    '''
+    If alpha is 0, then SET classifier_input = X_test
+    If alpha is nonzero, then SET classifier_input = decoded_imgs
+    '''
     classifier_input = decoded_imgs
 
     #one-hot encoding using keras' numpy-related utilities (1 in the position of the value)
@@ -138,7 +151,7 @@ if beta != 0:
 
     #training the model and saving metrics in history
     history = model.fit(X_train, Y_train,
-                        batch_size=128, epochs=10,
+                        batch_size=128, epochs= epochs_b,
                         verbose=2,
                         validation_data=(classifier_input, Y_test))
 
@@ -150,13 +163,13 @@ if beta != 0:
     print('Saved trained model at %s ' % model_path)
 
 
-    val_loss = history.history['val_loss']
-    epochs = range(epochs)
     plt.figure()
-    plt.plot(epochs, (val_loss * beta), 'b', label='Validation loss')
-    plt.title('Training and validation loss')
-    plt.legend()
-    plt.show()
+    #plt.plot(history.history['loss'])
+    plt.plot(history.history['val_loss'])
+    plt.title('Classifer Validation Data Loss')
+    plt.ylabel('loss')
+    plt.xlabel('epoch')
+    plt.show(block=False)
 
     mnist_model = load_model("keras_mnist.h5")
     loss_and_metrics = mnist_model.evaluate(classifier_input, Y_test, verbose=2)
@@ -177,25 +190,71 @@ if beta != 0:
 
     #adapt figure size to accomodate 18 subplots
     plt.rcParams['figure.figsize'] = (7, 14)
+    if alpha == 0:
+        plt.figure()
+        plt.rcParams.update({'font.size': 5})
+        # plot 9 correct predictions
+        for i, correct in enumerate(correct_indices[:9]):
+            plt.subplot(6, 3, i + 1)
+            plt.imshow(X_test[correct].reshape(28, 28), cmap='gray',
+                       interpolation='none')
+            plt.title("Predicted: {}, Truth: {}".format(predicted_classes[correct], y_test[correct]))
+            plt.xticks([])
+            plt.yticks([])
 
-    figure_evaluation = plt.figure()
+        # plot 9 incorrect
+        for i, incorrect in enumerate(incorrect_indices[:9]):
+            plt.subplot(6, 3, i + 10)
+            plt.imshow(X_test[incorrect].reshape(28, 28), cmap='gray', interpolation='none')
+            plt.title("Predicted {}, Truth: {}".format(predicted_classes[incorrect], y_test[incorrect]))
+            plt.xticks([])
+            plt.yticks([])
 
-    #plot 9 correct predictions
-    for i, correct in enumerate(correct_indices[:9]):
-        plt.subplot(6,3,i+1)
-        plt.imshow(classifier_input[correct].reshape(28,28), cmap='gray',
-                   interpolation='none')
-        plt.title("Predicted: {}, Truth: {}".format(predicted_classes[correct], y_test[correct]))
-        plt.xticks([])
-        plt.yticks([])
+        plt.show()
 
-    #plot 9 incorrect
-    for i, incorrect in enumerate(incorrect_indices[:9]):
-        plt.subplot(6,3,i+10)
-        plt.imshow(classifier_input[incorrect].reshape(28,28), cmap='gray', interpolation='none')
-        plt.title("Predicted {}, Truth: {}".format(predicted_classes[incorrect], y_test[incorrect]))
-        plt.xticks([])
-        plt.yticks([])
+    if (alpha and beta != 0):
+        n = 10
+        plt.figure()
 
-    figure_evaluation.show()
-    plt.show()
+
+        #plt.figure(figsize=(20, 4))
+
+        for i in range(n):
+            # display original
+            ax = plt.subplot(2, n, i + 1)
+            plt.imshow(X_test[i].reshape(28, 28))
+            plt.title("X")
+            plt.gray()
+            ax.get_xaxis().set_visible(False)
+            ax.get_yaxis().set_visible(False)
+
+            # display reconstruction
+            ax = plt.subplot(2, n, i + 1 + n)
+            plt.imshow(decoded_imgs[i].reshape(28, 28))
+            plt.title("X'\nP: {},\n T: {}".format(predicted_classes[i], y_test[i]))
+            plt.gray()
+            ax.get_xaxis().set_visible(False)
+            ax.get_yaxis().set_visible(False)
+            # ax.set_xlabel("P: {},\n T: {}".format(predicted_classes[i], y_test[i]))
+
+            '''
+            indices = np.nonzero(predicted_classes)[0]
+            ans = indices[i]
+            ax = plt.subplot(3, n, i + 1 + n + n)
+            white_img = np.empty((784))
+            white_img.fill(0)
+            plt.imshow(white_img.reshape(28, 28))
+            plt.gray()
+            plt.title("P: {},\n T: {}".format(predicted_classes[i], y_test[i]))
+            plt.xticks([])
+            plt.yticks([])
+            ax.get_xaxis().set_visible(False)
+            ax.get_yaxis().set_visible(False)
+            '''
+            #plt.patch.set_visible(False)
+
+
+        plt.show()
+
+
+
