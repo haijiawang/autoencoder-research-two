@@ -66,19 +66,18 @@ decoded_imgs = decoder.predict(encoded_imgs)
 '''
 SHARPENING FILTER SECTION
 '''
+
 filter_imgs = decoded_imgs * 255
 filter_imgs = decoded_imgs.reshape(10000, 28, 28)
 
 #This function takes an iamge and a kernel and returns the convolution of them
     #Takes an image and kernel
     #Returns a numpy array of size image height by image width (convolution output)
-kernel = np.array([[-1/9, -1/9, -1/9], [-1/9, 1, -1/9], [-1/9, -1/9, -1/9]])
+kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 
 kernel = np.flipud(np.fliplr(kernel)) #flip the kernel
 
 for i in range(10000):
-    img = filter_imgs[i]
-    filter_imgs[i] = exposure.equalize_adapthist(img/np.max(np.abs(img)), clip_limit=0.03)
     img_sharpen = np.zeros_like(filter_imgs[i])
     image = filter_imgs[i]
     #add zero padding to the input image
@@ -90,11 +89,7 @@ for i in range(10000):
             img_sharpen[y, x] = (kernel*image_padded[y:y+3,x:x+3]).sum()
 
     filter_imgs[i] = img_sharpen
-    img = filter_imgs[i]
-    filter_imgs[i] = exposure.equalize_adapthist(img/np.max(np.abs(img_sharpen)))
 
-
-#image_sharpen_equalized = exposure.equalize_adapthist(image_sharpen/np.max(np.abs(image_sharpen)))
 
 #img = io.imread('image.jpg')
 #img = color.rgb2gray(img)
@@ -119,10 +114,10 @@ for i in range(10000):
 #plt.imshow(image_sharpen_equalized, cmap=plt.cm.gray)
 #plt.axis('off')
 #plt.show()
-#print(decoded_imgs[900])
-#print(filter_imgs[900])
+print(decoded_imgs[900])
+print(filter_imgs[900])
 
-#'''
+
 n = 10 #how many digits we will display
 plt.figure(figsize=(20, 4))
 for i in range(n):
@@ -148,4 +143,3 @@ for i in range(n):
     ax.get_yaxis().set_visible(False)
 
 plt.show()
-#'''
