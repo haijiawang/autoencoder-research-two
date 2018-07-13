@@ -10,6 +10,8 @@ import numpy as np
 from skimage import exposure
 import pylab
 from skimage import io, color
+from PIL import ImageFilter
+from PIL import Image
 
 '''
 AUTOENCODER SECTION
@@ -54,7 +56,7 @@ x_train = x_train.reshape((len(x_train)), np.prod(x_train.shape[1:]))
 x_test = x_test.reshape((len(x_test)), np.prod(x_test.shape[1:]))
 
 autoencoder.fit(x_train, x_train,
-                epochs=5,
+                epochs=10,
                 batch_size=256,
                 shuffle=True,
                 validation_data=(x_test, x_test))
@@ -67,8 +69,10 @@ decoded_imgs = decoder.predict(encoded_imgs)
 SHARPENING FILTER SECTION
 '''
 
-filter_imgs = decoded_imgs * 255
-filter_imgs = decoded_imgs.reshape(10000, 28, 28)
+filter_imgs = np.copy(decoded_imgs) * 255
+filter_imgs = filter_imgs.astype('float32')
+filter_imgs = filter_imgs.reshape(10000, 28, 28)
+
 
 #This function takes an iamge and a kernel and returns the convolution of them
     #Takes an image and kernel
@@ -77,9 +81,10 @@ kernel = np.array([[0, -1, 0], [-1, 5, -1], [0, -1, 0]])
 
 kernel = np.flipud(np.fliplr(kernel)) #flip the kernel
 
-for i in range(10000):
+for i in range(100):
     img_sharpen = np.zeros_like(filter_imgs[i])
     image = filter_imgs[i]
+    #image_equalized = exposure.equalize_adapthist(image/np.max(np.abs(image)), clip_limit=0.03)
     #add zero padding to the input image
     image_padded = np.zeros((image.shape[0] + 2, image.shape[1] + 2))
     image_padded[1:-1, 1:-1] =  image     #puts image onto image with padded zeroes
@@ -90,6 +95,16 @@ for i in range(10000):
 
     filter_imgs[i] = img_sharpen
 
+function_img = np.copy(decoded_imgs) * 255
+function_img = function_img.astype('float32')
+function_img = function_img.reshape(10000, 28, 28)
+
+for i in range(100):
+    function_img[i] = Image.fromarray(function_img[i])
+    function_img[i] = function_img[i].filter(ImageFilter.SHARPEN)
+
+#image_sharpen_equalized = exposure.equalize_adapthist(image_sharpen/np.max(np.abs(image_sharpen)))
+#plt.imshow(image_sharpen_equalized, cmap=plt.cm.gray)
 
 #img = io.imread('image.jpg')
 #img = color.rgb2gray(img)
@@ -114,9 +129,6 @@ for i in range(10000):
 #plt.imshow(image_sharpen_equalized, cmap=plt.cm.gray)
 #plt.axis('off')
 #plt.show()
-print(decoded_imgs[900])
-print(filter_imgs[900])
-
 
 n = 10 #how many digits we will display
 plt.figure(figsize=(20, 4))
@@ -137,7 +149,7 @@ for i in range(n):
     
     #display images after going through sharpening filter
     ax = plt.subplot(3, n, i+1+n+n)
-    plt.imshow(filter_imgs[i].reshape(28, 28))
+    plt.imshow(function_img[i].reshape(28, 28))
     plt.gray()
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
