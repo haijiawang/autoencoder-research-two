@@ -170,16 +170,16 @@ CLASSIFIER PORTION
 
 import os
 os.environ['CUDA_VISIBLE_DEVICES']=''
+(new_x, new_y), (newtest_x, newtest_y) = mnist.load_data()
 
-class_x = np.copy(x_train)
-class_x = class_x.astype('float32')/255
-class_x = class_x.reshape((len(class_x)), np.prod(class_x.shape[1:]))
-new_decoded_imgs = new_decoded_imgs.reshape(4000, 784)
+new_x = new_x.astype('float32')/255
+new_x = new_x.reshape((len(new_x)), np.prod(new_x.shape[1:]))
+new_decoded_imgs = new_decoded_imgs.reshape((len(new_decoded_imgs)), np.prod((new_decoded_imgs.shape[1:])))
 
 n_classes = 10
-y_test = y_test[:4000:]
-y_train = np_utils.to_categorical(y_train, n_classes)
-y_test = np_utils.to_categorical(y_test, n_classes)
+newtest_y = newtest_y[:4000:]
+New_y = np_utils.to_categorical(new_y, n_classes)
+Newtest_y = np_utils.to_categorical(newtest_y, n_classes)
 
 model = Sequential()
 model.add(Dense(512, input_shape=(784,)))
@@ -196,10 +196,10 @@ model.add(Activation('softmax'))
 model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='adam')
 
 #training the model and saving metrics in history
-history = model.fit(class_x, y_train,
+history = model.fit(new_x, New_y,
                     batch_size=128, epochs=5,
                     verbose=2,
-                    validation_data=(new_decoded_imgs, y_test))
+                    validation_data=(new_decoded_imgs, Newtest_y))
 
 #saving the model
 save_dir = "/Users/alyssa/Documents/keras-practice-two/neural_network_filter/"
@@ -210,7 +210,7 @@ print('Saved trained model at %s ' % model_path)
 
 
 mnist_model = load_model("keras_mnist.h5")
-loss_and_metrics = mnist_model.evaluate(new_decoded_imgs, y_test, verbose=2)
+loss_and_metrics = mnist_model.evaluate(new_decoded_imgs, Newtest_y, verbose=2)
 
 print("Test Loss", loss_and_metrics[0])
 print("Test Accuracy", loss_and_metrics[1])
@@ -220,32 +220,34 @@ mnist_model = load_model("keras_mnist.h5")
 predicted_classes = mnist_model.predict_classes(new_decoded_imgs)
 
 #see which we predicted correctly and which not
-correct_indices = np.nonzero(predicted_classes == y_test)[0]
-incorrect_indices = np.nonzero(predicted_classes != y_test)[0]
-print(len(correct_indices), "classified correctly")
-print(len(incorrect_indices), "classified incorrectly")
+#correct_indices = np.nonzero(predicted_classes == y_test)[0]
+#icorrect_indices = np.nonzero(predicted_classes != y_test)[0]
+#print(len(correct_indices), "classified correctly")
+#print(len(incorrect_indices), "classified incorrectly")
 
 #adapt figure size to accomodate 18 subplots
-plt.rcParams['figure.figsize'] = (7, 14)
+#plt.rcParams['figure.figsize'] = (7, 14)
 
 plt.figure()
 
 #plot 9 correct predictions
-for i, correct in enumerate(correct_indices[:9]):
+for i in range(18) :
+    #enumerate(correct_indices[:9]):
     plt.subplot(6,3,i+1)
-    plt.imshow(new_decoded_imgs[correct].reshape(28,28), cmap='gray',
+    plt.imshow(new_decoded_imgs[i].reshape(28,28), cmap='gray',
                interpolation='none')
-    plt.title("Predicted: {}, Truth: {}".format(predicted_classes[correct], y_test[correct]), fontsize=5)
+    plt.xlabel("Predicted: {}, Truth: {}".format(predicted_classes[i], newtest_y[i]), fontsize=5)
     plt.xticks([])
     plt.yticks([])
 
+'''
 #plot 9 incorrect
-for i, incorrect in enumerate(incorrect_indices[:9]):
+for i in range(9): #enumerate(incorrect_indices[:9]):
     plt.subplot(6,3,i+15)
-    plt.imshow(new_decoded_imgs[incorrect].reshape(28,28), cmap='gray', interpolation='none')
-    plt.title("Predicted {}, Truth: {}".format(predicted_classes[incorrect], y_test[incorrect]), fontsize=5)
+    plt.imshow(new_decoded_imgs[i].reshape(28,28), cmap='gray', interpolation='none')
+    plt.title("Predicted {}, Truth: {}".format(predicted_classes[i], newtest_y[i]), fontsize=5)
     plt.xticks([])
     plt.yticks([])
-
+'''
 
 plt.show()
