@@ -73,6 +73,8 @@ PREPARING THE "SHARP" IMAGES
 #The SHARP images are x_sharp
 
 sharp_img = np.copy(x_test)
+
+
 x_sharp = np.copy(x_test)
 for i in range(10000):
     img = Image.fromarray(sharp_img[i])

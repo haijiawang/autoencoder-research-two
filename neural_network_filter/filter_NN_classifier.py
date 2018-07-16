@@ -30,7 +30,7 @@ X_train = np.copy(x_train)
 PREPARING THE "BLURRY" IMAGES (AUTOENCODER OUTPUT)
 '''
 
-epochs_a = 5
+epochs_a = 10
 
 encoding_dim = 32
 
@@ -89,22 +89,16 @@ for i in range(10000):
 '''
 BUILDING THE NEURAL NETWORK
 '''
-#specifying the input dimensions
+
 input_img = Input(shape=(28, 28, 1))
 x = Conv2D(64, (3,3), activation='relu', padding='same')(input_img)
 x = MaxPooling2D((2,2), padding='same')(x)
 x = Conv2D(64, (3,3), activation='relu', padding='same')(x)
-#x = MaxPooling2D((2,2), padding='same')(x)
-#x = Conv2D(8, (3,3), activation='relu', padding='same')(x)
 encoded = MaxPooling2D((2,2), padding='same')(x)
-#at this point the representation is (4, 4, 8) i.e. 128-dimensional
-#at this point the representation is (7, 7, 32)
 x = Conv2D(64, (3,3), activation='relu', padding='same')(encoded)
 x = UpSampling2D((2,2))(x)
 x = Conv2D(64, (3,3), activation='relu', padding='same')(x)
 x = UpSampling2D((2,2))(x)
-#x = Conv2D(16, (3,3), activation='relu')(x)
-#x = UpSampling2D((2,2))(x)
 decoded = Conv2D(1, (3, 3), activation='sigmoid', padding='same')(x)
 
 conv_nn = Model(input_img, decoded)
@@ -123,7 +117,7 @@ from keras.callbacks import TensorBoard
 
 
 conv_nn.fit(decoded_imgs_train, x_sharp_train,
-            epochs=2,
+            epochs=50,
             batch_size=128,
             shuffle=True,
             validation_data = (decoded_imgs_test, x_sharp_test),
@@ -140,7 +134,7 @@ for i in range(n):
     ax = plt.subplot(3, n, i +1)
     plt.imshow(x_test[i].reshape(28, 28))
     plt.gray()
-    plt.title('Autoencoder Input', fontsize=4)
+    plt.title('Autoencoder Input', fontsize=5)
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
 
@@ -148,7 +142,7 @@ for i in range(n):
     ax = plt.subplot(3, n, i+1 +n)
     plt.imshow(decoded_imgs_test[i].reshape(28,28))
     plt.gray()
-    plt.title('Autoencoder Output', fontsize=4)
+    plt.title('Autoencoder Output', fontsize=5)
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
 
@@ -156,11 +150,11 @@ for i in range(n):
     ax = plt.subplot(3, n, i+1+ n +n)
     plt.imshow(new_decoded_imgs[i].reshape(28, 28))
     plt.gray()
-    plt.title('Sharpened', fontsize=6)
+    plt.title('Sharpened', fontsize=7)
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
 
-plt.show()
+plt.show(block=False)
 
 
 
@@ -197,7 +191,7 @@ model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='
 
 #training the model and saving metrics in history
 history = model.fit(new_x, New_y,
-                    batch_size=128, epochs=5,
+                    batch_size=128, epochs=50,
                     verbose=2,
                     validation_data=(new_decoded_imgs, Newtest_y))
 
@@ -228,7 +222,7 @@ predicted_classes = mnist_model.predict_classes(new_decoded_imgs)
 #adapt figure size to accomodate 18 subplots
 #plt.rcParams['figure.figsize'] = (7, 14)
 
-plt.figure()
+plt.figure(figsize=(8, 10))
 
 #plot 9 correct predictions
 for i in range(18) :
@@ -236,7 +230,7 @@ for i in range(18) :
     plt.subplot(6,3,i+1)
     plt.imshow(new_decoded_imgs[i].reshape(28,28), cmap='gray',
                interpolation='none')
-    plt.xlabel("Predicted: {}, Truth: {}".format(predicted_classes[i], newtest_y[i]), fontsize=5)
+    plt.xlabel("Predicted: {}, Truth: {}".format(predicted_classes[i], newtest_y[i]), fontsize=7)
     plt.xticks([])
     plt.yticks([])
 

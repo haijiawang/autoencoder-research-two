@@ -1,3 +1,6 @@
+'''
+THIS IS THE FINAL ONE TO USE
+'''
 from keras.layers import Input, Dense
 from keras.models import Model
 from keras import regularizers
@@ -44,7 +47,7 @@ deco = autoencoder.layers[-1](deco)
 # create the decoder model
 decoder = Model(encoded_input, deco)
 
-autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy')
+autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy', metrics =['accuracy'])
 
 from keras.datasets import mnist
 import numpy as np
@@ -59,7 +62,7 @@ print x_train.shape
 print x_test.shape
 
 autoencoder.fit(x_train, x_train,
-                epochs=10,
+                epochs=100,
                 batch_size=256,
                 shuffle=True,
                 validation_data=(x_test, x_test))

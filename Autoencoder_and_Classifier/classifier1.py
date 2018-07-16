@@ -67,8 +67,13 @@ Y_test = np_utils.to_categorical(y_test, n_classes)
 print("Shape after one-hot encoding: ", Y_train.shape)
 
 #building a linear stack of layers with the sequential model
+
 model = Sequential()
 model.add(Dense(512, input_shape=(784,)))
+model.add(Activation('relu'))
+model.add(Dropout(0.2))
+
+model.add(Dense(512))
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
 
@@ -84,7 +89,7 @@ model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='
 
 #training the model and saving metrics in history
 history = model.fit(X_train, Y_train,
-                    batch_size=128, epochs=5,
+                    batch_size=256, epochs=150,
                     verbose=2,
                     validation_data=(X_test, Y_test))
 
@@ -95,7 +100,7 @@ model_path = os.path.join(save_dir, model_name)
 model.save(model_path)
 print('Saved trained model at %s ' % model_path)
 
-
+'''
 #plotting the metrics
 fig = plt.figure()
 plt.subplot(2,1,1)
@@ -115,7 +120,7 @@ plt.xlabel('epoch')
 plt.legend(['train', 'test'], loc='upper right')
 
 plt.tight_layout()
-
+'''
 #plt.show()
 
 mnist_model = load_model("keras_mnist.h5")
@@ -136,26 +141,27 @@ print(len(correct_indices), "classified correctly")
 print(len(incorrect_indices), "classified incorrectly")
 
 #adapt figure size to accomodate 18 subplots
-plt.rcParams['figure.figsize'] = (7, 14)
+#plt.rcParams['figure.figsize'] = (7, 14)
 
-figure_evaluation = plt.figure()
-
+plt.figure(figsize=(10, 20))
+'''
 #plot 9 correct predictions
 for i, correct in enumerate(correct_indices[:9]):
     plt.subplot(6,3,i+1)
     plt.imshow(X_test[correct].reshape(28,28), cmap='gray',
                interpolation='none')
-    plt.title("Predicted: {}, Truth: {}".format(predicted_classes[correct], y_test[correct]))
+    plt.title("Predicted: {}, Truth: {}".format(predicted_classes[correct], y_test[correct]), fontsize = 9)
     plt.xticks([])
     plt.yticks([])
 
 #plot 9 incorrect
 for i, incorrect in enumerate(incorrect_indices[:9]):
-    plt.subplot(6,3,i+15)
+    plt.subplot(6,3,i+10)
     plt.imshow(X_test[incorrect].reshape(28,28), cmap='gray', interpolation='none')
-    plt.title("Predicted {}, Truth: {}".format(predicted_classes[incorrect], y_test[incorrect]))
+    plt.title("Predicted {}, Truth: {}".format(predicted_classes[incorrect], y_test[incorrect]), fontsize = 9)
     plt.xticks([])
     plt.yticks([])
 
-figure_evaluation.show()
+#figure_evaluation.show()
 plt.show()
+'''
