@@ -27,7 +27,7 @@ encoder = Model(input_img, encoded)
 
 
 encoded_input = Input(shape=(encoding_dim,))
-encoded_input = Input(shape=(encoding_dim,))
+#encoded_input = Input(shape=(encoding_dim,))
 
 deco = autoencoder.layers[-3](encoded_input)
 deco = autoencoder.layers[-2](deco)
@@ -51,13 +51,13 @@ x_test = x_test.reshape((len(x_test)), np.prod(x_test.shape[1:]))
 print x_train.shape
 print x_test.shape
 
-autoencoder.fit(x_train, x_train,
+'''autoencoder.fit(x_train, x_train,
                 epochs=1,
                 batch_size=256,
                 shuffle=True,
                 verbose=2,
                 validation_data=(x_test, x_test))
-
+'''
 
 
 import matplotlib as mpl
