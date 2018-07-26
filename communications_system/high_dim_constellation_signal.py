@@ -10,7 +10,7 @@ from keras.optimizers import SGD
 import random as rn
 
 # defining parameters
-M = 16
+M = 1024
 k = np.log2(M)
 k = int(k)
 print ('M:', M, 'k:', k)
@@ -28,8 +28,8 @@ for i in label:
 
 data = np.array(data)
 
-R = 4.0 / 4.0
-n_channel = 4
+R = 10.0 / 10.0
+n_channel = 10
 input_signal = Input(shape=(M,))
 encoded = Dense(M, activation='relu')(input_signal)
 encoded1 = Dense(n_channel, activation='linear')(encoded)
@@ -75,7 +75,7 @@ deco = autoencoder.layers[-1](deco)
 # create the decoder model
 decoder = Model(encoded_input, deco)
 
-N = 400000
+N = 1500
 test_label = np.random.randint(M, size=N)
 test_data = []
 
@@ -100,10 +100,12 @@ noise_std = np.sqrt(1/(2*R*EbNo_train))
 noise = noise_std * np.random.randn(N, n_channel)
 x_emb = x_emb + noise
 from sklearn.manifold import TSNE
-X_embedded = TSNE(learning_rate=600, n_components=2, n_iter=250, random_state=0, perplexity=30).fit_transform(x_emb)
+X_embedded = TSNE(learning_rate=600, n_components=2, n_iter=1000, random_state=0, perplexity=30).fit_transform(x_emb)
 print('X_embedded shape:', X_embedded.shape)
-X_embedded = X_embedded / 4.0
+X_embedded = X_embedded
+X_new_embedded = X_embedded / 10
 plt.scatter(X_embedded[:,0], X_embedded[:,1])
 plt.grid()
-plt.savefig('Constellation_7_4')
+plt.savefig('Constellation_10_10')
 plt.show()
+

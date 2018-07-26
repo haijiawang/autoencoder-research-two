@@ -35,15 +35,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auto_2_2.npy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/auto_2_2.npy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="autoencoder_communication_system3.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system3.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,8 +47,8 @@
       <file leaf-file-name="constellation_signal.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/constellation_signal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="107" selection-start-line="107" selection-end-line="110" />
+            <state relative-caret-position="308">
+              <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
               <folding>
                 <element signature="e#83#101#0" expanded="true" />
               </folding>
@@ -68,13 +59,18 @@
       <file leaf-file-name="high_dim_constellation_signal.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/high_dim_constellation_signal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="104" column="27" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+            <state relative-caret-position="1148">
+              <caret line="102" column="64" selection-start-line="102" selection-start-column="64" selection-end-line="102" selection-end-column="64" />
               <folding>
                 <element signature="e#83#101#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XConstellation_4_4.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/XConstellation_4_4.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="Constellation_2_2.png" pinned="false" current-in-tab="false">
@@ -174,10 +170,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="447" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="813" />
+    <option name="width" value="993" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -354,14 +351,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="1" />
+    <frame x="447" y="23" width="993" height="812" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.175" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25377643" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32882273" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.26116374" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.2615176" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -404,7 +401,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/convolutional_autoencoder.py" />
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -712,19 +708,6 @@
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/Constellation_2_2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/Constellation_4_4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/constellation_signal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="107" selection-start-line="107" selection-end-line="110" />
-          <folding>
-            <element signature="e#83#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -735,10 +718,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/XConstellation_4_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/constellation_signal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+          <folding>
+            <element signature="e#83#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/Constellation_4_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/high_dim_constellation_signal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="104" column="27" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+        <state relative-caret-position="1148">
+          <caret line="102" column="64" selection-start-line="102" selection-start-column="64" selection-end-line="102" selection-end-column="64" />
           <folding>
             <element signature="e#83#101#0" expanded="true" />
           </folding>
