@@ -122,7 +122,7 @@ plt.figure()
                         validation_data=(classifier_input, Y_test))
 
     #saving the model
-    save_dir = "/Users/alyssa/Documents/keras-practice-two/Autoencoder_and_Classifier/"
+    save_dir = "/Users/alyssa/Documents/mit_eecs_research/Autoencoder_and_Classifier/"
     model_name = 'keras_mnist.h5'
     model_path = os.path.join(save_dir, model_name)
     model.save(model_path)

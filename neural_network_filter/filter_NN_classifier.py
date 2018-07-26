@@ -196,7 +196,7 @@ history = model.fit(new_x, New_y,
                     validation_data=(new_decoded_imgs, Newtest_y))
 
 #saving the model
-save_dir = "/Users/alyssa/Documents/keras-practice-two/neural_network_filter/"
+save_dir = "/Users/alyssa/Documents/mit_eecs_research/neural_network_filter/"
 model_name = 'keras_mnist.h5'
 model_path = os.path.join(save_dir, model_name)
 model.save(model_path)
