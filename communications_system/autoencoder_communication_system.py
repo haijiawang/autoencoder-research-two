@@ -15,7 +15,7 @@ from keras.optimizers import SGD
 import random as rn
 
 # defining parameters
-M = 4
+M = 8
 k = np.log2(M)
 k = int(k)
 print ('M:', M, 'k:', k)
@@ -33,8 +33,8 @@ for i in label:
 
 data = np.array(data)
 
-R = 2.0 / 2.0
-n_channel = 2
+R = 3.0 / 3.0
+n_channel = 3
 input_signal = Input(shape=(M,))
 encoded = Dense(M, activation='relu')(input_signal)
 encoded1 = Dense(n_channel, activation='linear')(encoded)
@@ -64,7 +64,7 @@ for i in val_label:
 val_data = np.array(val_data)
 
 autoencoder.fit(data, data,
-                epochs=20,
+                epochs=100,
                 batch_size=300,
                 verbose=2,
                 validation_data=(val_data, val_data))
@@ -104,7 +104,7 @@ def frange(x, y, jump):
         x += jump
 
 
-EbNodB_range = list(frange(-4, 8.5, 0.5))
+EbNodB_range = list(frange(-10, 20, 0.5))
 ber = [None] * len(EbNodB_range)
 for n in range(0, len(EbNodB_range)):
     EbNo = 10.0 ** (EbNodB_range[n] / 10.0)
@@ -130,9 +130,9 @@ import matplotlib as mpl
 mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 
-plt.plot(EbNodB_range, ber, linestyle='--', color='b', marker='o', label='Autoencoder(11,11)')
+plt.plot(EbNodB_range, ber, linestyle='--', color='b', marker='o', label='Autoencoder(3,3)')
 print(ber)
-np.save('auto_11_11', ber)
+np.save('auto_3_3', ber)
 # plt.plot(EbNodB_range, ber, linestyle='', marker='o', color='r')
 # plt.plot(EbNodB_range, ber, linestyle='-', color = 'b')
 # plt.plot(list(EbNodB_range), ber_theory, 'ro-',label='BPSK BER')
@@ -143,5 +143,5 @@ plt.ylabel('Block Error Rate')
 plt.grid()
 plt.legend(loc='upper right', ncol=1)
 
-plt.savefig('AutoEncoder_11_11_BER_matplotlib')
+plt.savefig('AutoEncoder_3_3_BER_matplotlib')
 plt.show()

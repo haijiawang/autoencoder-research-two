@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Edited Version - Haijia
+
+"""
 
 # importing libs# import
 import numpy as np
@@ -35,7 +40,8 @@ encoded = Dense(M, activation='relu')(input_signal)
 encoded1 = Dense(n_channel, activation='linear')(encoded)
 encoded2 = BatchNormalization()(encoded1)
 
-EbNo_train = np.power(10, 0.3)  # coverted 7 db of EbNo
+EbNo = np.random.randint(-3, 10)
+EbNo_train = np.power(10, EbNo/10.0)  # coverted 7 db of EbNo
 #EbNo_train = EbNo_train.astype('float')
 alpha1 = pow((2 * R * EbNo_train), -0.5)
 encoded3 = GaussianNoise(alpha1)(encoded2)
@@ -75,7 +81,7 @@ deco = autoencoder.layers[-1](deco)
 # create the decoder model
 decoder = Model(encoded_input, deco)
 
-N = 1500
+N = 400000
 test_label = np.random.randint(M, size=N)
 test_data = []
 
@@ -88,38 +94,55 @@ test_data = np.array(test_data)
 
 temp_test = 6
 print (test_data[temp_test][test_label[temp_test]], test_label[temp_test])
-print(encoder.predict(val_data).shape)
-print(encoder.predict(val_data)[0])
+
+print('val data', val_data)
+predicted = np.argmax(autoencoder.predict(val_data), axis =1)
+print('predicted', predicted)
+
+def frange(x, y, jump):
+    while x < y:
+        yield x
+        x += jump
+
+
+EbNodB_range = list(frange(-10, 20, 0.5))
+ber = [None] * len(EbNodB_range)
+for n in range(0, len(EbNodB_range)):
+    EbNo = 10.0 ** (EbNodB_range[n] / 10.0)
+    #print('Test' , EbNo)
+    #print('R value', R)
+    alpha1 = (2 * R * EbNo) ** (-0.5)
+    noise_std = alpha1
+    noise_mean = 0
+    no_errors = 0
+    nn = N
+    noise = noise_std * np.random.randn(nn, n_channel)
+    encoded_signal = encoder.predict(test_data)
+    final_signal = encoded_signal + noise
+    pred_final_signal = decoder.predict(final_signal)
+    pred_output = np.argmax(pred_final_signal, axis=1)
+    no_errors = (pred_output != test_label)
+    no_errors = no_errors.astype(int)
+    no_errors = no_errors.sum()
+    ber[n] = 1.0 * no_errors / nn
+    print ('SNR:', EbNodB_range[n], 'BER:', ber[n])
 
 import matplotlib as mpl
 mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 
-x_emb = encoder.predict(test_data)
-noise_std = np.sqrt(1/(2*R*EbNo_train))
-noise = noise_std * np.random.randn(N, n_channel)
-x_emb = x_emb + noise
-from sklearn.manifold import TSNE
-X_embedded = TSNE(learning_rate=600, n_components=2, n_iter=500, random_state=0, perplexity=30).fit_transform(x_emb)
-print('X_embedded shape:', X_embedded.shape)
-X_embedded = X_embedded
-X_new_embedded = X_embedded / 5
-plt.scatter(X_embedded[:,0], X_embedded[:,1])
-plt.grid()
-plt.title('(3,3) Constellation Signal')
-plt.savefig('Constellation_3_3')
-plt.show(block=False)
+plt.plot(EbNodB_range, ber, linestyle='--', color='b', marker='o', label='Autoencoder(3,3)')
+print(ber)
+np.save('auto_range10_10_20', ber)
+# plt.plot(EbNodB_range, ber, linestyle='', marker='o', color='r')
+# plt.plot(EbNodB_range, ber, linestyle='-', color = 'b')
+# plt.plot(list(EbNodB_range), ber_theory, 'ro-',label='BPSK BER')
 
-from sklearn.cluster import KMeans
-#number of clusters
-kmeans = KMeans(n_clusters=8)
-#Fitting the input data
-kmeans = kmeans.fit(X_embedded)
-#Getting the cluster labels
-labels = kmeans.predict(X_embedded)
-#Centroid values
-centroids = kmeans.cluster_centers_
-np.save('X_3db_i_q_arr', centroids)
-plt.figure()
-plt.scatter(centroids[:,0], centroids[:,1])
+plt.yscale('log')
+plt.xlabel('SNR Range')
+plt.ylabel('Block Error Rate')
+plt.grid()
+plt.legend(loc='upper right', ncol=1)
+
+plt.savefig('AutoEncoder_range3_3_BER_matplotlib')
 plt.show()

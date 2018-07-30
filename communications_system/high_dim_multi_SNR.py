@@ -30,24 +30,6 @@ data = np.array(data)
 
 R = 3.0 / 3.0
 n_channel = 3
-input_signal = Input(shape=(M,))
-encoded = Dense(M, activation='relu')(input_signal)
-encoded1 = Dense(n_channel, activation='linear')(encoded)
-encoded2 = BatchNormalization()(encoded1)
-
-EbNo_train = np.power(10, 0.3)  # coverted 7 db of EbNo
-#EbNo_train = EbNo_train.astype('float')
-alpha1 = pow((2 * R * EbNo_train), -0.5)
-encoded3 = GaussianNoise(alpha1)(encoded2)
-
-decoded = Dense(M, activation='relu')(encoded3)
-decoded1 = Dense(M, activation='softmax')(decoded)
-
-autoencoder = Model(input_signal, decoded1)
-# sgd = SGD(lr=0.001)
-autoencoder.compile(optimizer='adam', loss='categorical_crossentropy')
-
-autoencoder.summary()
 
 N_val = 1500
 val_label = np.random.randint(M, size=N_val)
@@ -58,22 +40,43 @@ for i in val_label:
     val_data.append(temp)
 val_data = np.array(val_data)
 
-autoencoder.fit(data, data,
-                epochs=100,
-                batch_size=300,
-                verbose=2,
-                validation_data=(val_data, val_data))
+for x in range(1, 16, 1):
+    input_signal = Input(shape=(M,))
+    encoded = Dense(M, activation='relu')(input_signal)
+    encoded1 = Dense(n_channel, activation='linear')(encoded)
+    encoded2 = BatchNormalization()(encoded1)
 
-from keras.models import load_model
+    db = x / 10.0
+    EbNo_train = np.power(10, db)  # coverted 7 db of EbNo
+    alpha1 = pow((2 * R * EbNo_train), -0.5)
+    encoded3 = GaussianNoise(alpha1)(encoded2)
 
-encoder = Model(input_signal, encoded2)
+    decoded = Dense(M, activation='relu')(encoded3)
+    decoded1 = Dense(M, activation='softmax')(decoded)
 
-encoded_input = Input(shape=(n_channel,))
+    autoencoder = Model(input_signal, decoded1)
+    # sgd = SGD(lr=0.001)
+    autoencoder.compile(optimizer='adam', loss='categorical_crossentropy')
 
-deco = autoencoder.layers[-2](encoded_input)
-deco = autoencoder.layers[-1](deco)
-# create the decoder model
-decoder = Model(encoded_input, deco)
+    autoencoder.summary()
+
+
+    autoencoder.fit(data, data,
+                    epochs=100,
+                    batch_size=300,
+                    verbose=2,
+                    validation_data=(val_data, val_data))
+
+    from keras.models import load_model
+
+    encoder = Model(input_signal, encoded2)
+
+    encoded_input = Input(shape=(n_channel,))
+
+    deco = autoencoder.layers[-2](encoded_input)
+    deco = autoencoder.layers[-1](deco)
+    # create the decoder model
+    decoder = Model(encoded_input, deco)
 
 N = 1500
 test_label = np.random.randint(M, size=N)

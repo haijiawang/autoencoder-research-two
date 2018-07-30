@@ -57,14 +57,14 @@ plt.title('BPSK Modulation')
 #plt.plot(snr_array, bpsk_2_2_array, linestyle = ':', marker = 's', color = 'lightpink', label = 'BPSK (2, 2)')
 #plt.plot(snr_array, auto_2_2_array, linestyle = '-', marker = '*', color = 'dimgrey', label = 'AE (2,2)')
 
-#plt.plot(snr_array, bpsk_3_3_array, linestyle = ':', marker = 's', color = 'lavenderblush', label = 'BPSK (3, 3)')
+#plt.plot(snr_array, bpsk_3_3_array, linestyle = ':', marker = 's', color = 'darkseagreen', label = 'BPSK (3, 3)')
 #plt.plot(snr_array, auto_3_3_array, linestyle = '-', marker = '*', color = 'darkgrey', label = 'AE (3,3)')
 
 #plt.plot(snr_array, bpsk_4_4_array, linestyle = ':', marker = 's', color = 'orchid', label = 'BPSK (4, 4)')
-#plt.plot(snr_array, auto_4_4_array, linestyle = '-', marker = '*', color = 'gainsboro', label = 'AE (4,4)')
+#plt.plot(snr_array, auto_4_4_array, linestyle = '-', marker = '*', color = 'midnightblue', label = 'AE (4,4)')
 
-#plt.plot(snr_array, bpsk_5_5_array, linestyle = ':', marker = 's', color = 'thistle', label = 'BPSK (5, 5)')
-#plt.plot(snr_array, auto_5_5_array, linestyle = '-', marker = '*', color = 'brown', label = 'AE (5,5)')
+plt.plot(snr_array, bpsk_5_5_array, linestyle = ':', marker = 's', color = 'thistle', label = 'BPSK (5, 5)')
+plt.plot(snr_array, auto_5_5_array, linestyle = '-', marker = '*', color = 'brown', label = 'AE (5,5)')
 
 #plt.plot(snr_array, bpsk_6_6_array, linestyle = ':', marker = 's', color = 'indigo', label = 'BPSK (6, 6)')
 #plt.plot(snr_array, auto_6_6_array, linestyle = '-', marker = '*', color = 'r', label = 'AE (6,6)')
@@ -82,8 +82,8 @@ plt.title('BPSK Modulation')
 #plt.plot(snr_array, bpsk_10_10_array, linestyle = ':', marker = 's', color = 'steelblue', label = 'BPSK (10, 10)')
 #plt.plot(snr_array, auto_10_10_array, linestyle = '-', marker = '*', color = 'palegoldenrod', label = 'AE (10,10)')
 
-plt.plot(snr_array, bpsk_11_11_array, linestyle = ':', marker = 's', color = 'lightblue', label = 'BPSK (11, 11)')
-plt.plot(snr_array, auto_11_11_array, linestyle = '-', marker = '*', color = 'yellow', label = 'AE (11,11)')
+#plt.plot(snr_array, bpsk_11_11_array, linestyle = ':', marker = 's', color = 'lightblue', label = 'BPSK (11, 11)')
+#plt.plot(snr_array, auto_11_11_array, linestyle = '-', marker = '*', color = 'yellow', label = 'AE (11,11)')
 
 '''
 plt.plot(snr_array, bpsk_12_12_array, linestyle = ':', marker = 's', color = 'cyan', label = 'BPSK (12, 12)')
@@ -108,5 +108,5 @@ plt.ylabel('Block Error Rate')
 plt.grid()
 plt.legend(loc='upper right', ncol=1)
 
-plt.savefig('BPSK_AE_11_11')
+plt.savefig('BPSK_AE_5_5')
 plt.show()
