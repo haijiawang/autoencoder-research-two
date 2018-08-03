@@ -114,7 +114,85 @@ plt.figure(2)
 s.plot(dB=False, phase=False, stem=False, frange=(0,12e3))
 s.show()
 '''
-
+'''
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
 import numpy as np
-a = np.random.randint(0, 5)
-print(a)
+
+orig = np.load('R_orignal_autoencoder.npy')
+red = np.load('R_reduced_autoencoder.npy')
+SNR = snr_array = [-10, -9.5, -9, -8.5, -8, -7.5, -7, -6.5, -6, -5.5, -5, -4.5, -4, -3.5, -3, -2.5, -2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5]
+orig4 = np.load('R_orignal_autoencoder4.npy')
+red4 = np.load('R_reduced_autoencoder4.npy')
+orig5 = np.load('R_orignal_autoencoder5.npy')
+red5 = np.load('R_reduced_autoencoder5.npy')
+orig6 = np.load('R_custom_autoencoder6.npy')
+red6 = np.load('R_reduced_autoencoder6.npy')
+
+plt.figure()
+plt.plot(SNR, orig, linestyle = '-', marker = '*', color = 'darkseagreen', label = 'Original AE (3,3)')
+plt.plot(SNR, red, linestyle='-', marker = 's', color = 'blue', label='Reduced AE (3,3)')
+plt.yscale('log')
+plt.xlabel('SNR Range')
+plt.ylabel('Block Error Rate')
+plt.grid()
+plt.legend(loc='upper right', ncol=1)
+plt.savefig('R_comparison33')
+plt.show(block=False)
+
+plt.figure()
+plt.plot(SNR, orig4, linestyle = '-', marker = '*', color = 'darkseagreen', label = 'Original AE (4,4)')
+plt.plot(SNR, red4, linestyle='-', marker = 's', color = 'blue', label='Reduced AE (4,4)')
+plt.yscale('log')
+plt.xlabel('SNR Range')
+plt.ylabel('Block Error Rate')
+plt.grid()
+plt.legend(loc='upper right', ncol=1)
+plt.savefig('R_comparison44')
+plt.show(block=False)
+
+plt.figure()
+plt.plot(SNR, orig5, linestyle = '-', marker = '*', color = 'darkseagreen', label = 'Original AE (5,5)')
+plt.plot(SNR, red5, linestyle='-', marker = 's', color = 'blue', label='Reduced AE (5,5)')
+plt.yscale('log')
+plt.xlabel('SNR Range')
+plt.ylabel('Block Error Rate')
+plt.grid()
+plt.legend(loc='upper right', ncol=1)
+plt.savefig('R_comparison55')
+plt.show(block=False)
+
+plt.figure()
+plt.plot(SNR, orig6, linestyle = '-', marker = '*', color = 'darkseagreen', label = 'Original AE (6,6)')
+plt.plot(SNR, red6, linestyle='-', marker = 's', color = 'blue', label='Reduced AE (6,6)')
+plt.yscale('log')
+plt.xlabel('SNR Range')
+plt.ylabel('Block Error Rate')
+plt.grid()
+plt.legend(loc='upper right', ncol=1)
+plt.savefig('R_comparison66')
+plt.show(block=False)
+'''
+'''
+import numpy as np
+N = 10000
+k = 3
+M = 8
+data = []
+for i in range(10000):
+    arr = np.zeros(k + 1)
+    num = np.random.randint(0, M)
+    num = (np.binary_repr(num))
+    for j in range(0, len(num)):
+        arr[j] = num[j]
+
+    data.append(arr)
+
+
+for i in range(0, 10):
+    print(data[i])
+'''
+import random
+z = random.normalvariate(0,1)
+print(z)

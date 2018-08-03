@@ -11,97 +11,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="autoencoder_communication_system.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system.py">
+      <file leaf-file-name="rayleigh_slow_varying_7dB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_slow_varying_7dB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="114" column="18" lean-forward="true" selection-end-line="146" selection-end-column="10" />
+            <state relative-caret-position="2">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#26#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="A_awgn_channel.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="A_awgn_channel.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_awgn_channel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ae_visualization.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/ae_visualization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+            <state relative-caret-position="208">
+              <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
               <folding>
-                <element signature="e#25#43#0" expanded="true" />
+                <element signature="e#83#93#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="original.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/original.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="106" column="10" selection-end-line="119" />
-              <folding>
-                <element signature="e#25#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="centroid.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/centroid.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="116" column="50" lean-forward="true" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
-              <folding>
-                <element signature="e#25#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="convex_hull.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/convex_hull.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
-              <folding>
-                <element signature="e#25#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="three_d_ae_representation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/three_d_ae_representation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="32" selection-end-line="137" />
-              <folding>
-                <element signature="e#25#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="A_rayleigh_channel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rayleigh_channel.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="AutoEncoder_range3_3_BER_matplotlib.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_range3_3_BER_matplotlib.png">
+      <file leaf-file-name="A_rician33_fixed_7dB.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/A_rician33_fixed_7dB.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="AutoEncoder_range_3_3_BER_matplotlib.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_range_3_3_BER_matplotlib.png">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="rician_custom_layers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_custom_layers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rician_slow_varying_7dB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_slow_varying_7dB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tester.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/tester.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rician_fixed_7dB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_fixed_7dB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="A_rician_channel.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rician_channel.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="137" column="51" lean-forward="true" selection-start-line="82" selection-end-line="137" selection-end-column="51" />
+              <folding>
+                <element signature="e#83#101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rayleigh_fixed_7dB.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_fixed_7dB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2130">
+              <caret line="142" column="10" selection-start-line="142" selection-start-column="10" selection-end-line="142" selection-end-column="10" />
+              <folding>
+                <element signature="e#83#101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tester.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/tester.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="93" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="93" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -132,36 +149,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/classifer0.py" />
-        <option value="$PROJECT_DIR$/mnist_convolutional_neural_network.py" />
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/multi_input_output_practice.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/autoencoder_classifer_tutorial.py" />
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_and_classifer.py" />
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_classifer_revised.py" />
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/combined_network.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/image_processing_practice.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/CNN_2D_tutorial1.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/convolutional_autoencoder_tutorial.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/sharpen_filter_autoencoder2.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/noisy_convolutional_autoencoder.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/sharpen_filter_autoencoder1.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/filter_NN2.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/random_deleted_code.py" />
-        <option value="$PROJECT_DIR$/deep_simple_autoencoder_one.py" />
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/classifier1.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/filter_NN_classifier.py" />
-        <option value="$PROJECT_DIR$/neural_network_filter/filter_NN1.py" />
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_classifier_revised3.py" />
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder.py" />
-        <option value="$PROJECT_DIR$/Autoencoder_and_Classifier/autoencoder_classifier_revised2.py" />
-        <option value="$PROJECT_DIR$/weight_evaluation/autoencoder_model.py" />
-        <option value="$PROJECT_DIR$/weight_evaluation/autoencoder_model2.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_comm_system_log2Mdimension.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/constellation_signal.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system3.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/t_8psk_constellation_test.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/t_8psk_constellation_2.py" />
-        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/three_d_ae_representation.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/qam.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/sigproc.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/t_modulation_scheme.py" />
@@ -171,25 +163,50 @@
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/t_new_modulation_scheme.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/high_dim_multi_SNR.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range.py" />
-        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/tester.py" />
-        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range1.py" />
-        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range_plot.py" />
-        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rician_channel.py" />
-        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rayleigh_channel.py" />
-        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_awgn_channel.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/ae_visualizatoin.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/original.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/ae_visualization.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/centroid.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/convex_hull.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/awgn_layer.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/three_d_ae_representation.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system_reduced2.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system_reduced.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system_binary.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system_binary2.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_original_autoencoder.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/tester.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/bpsk_rician_channel.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/bpsk_rayleigh channel.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rician_channel.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/rayleigh_channel1.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rayleigh_channel1.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_plot.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_custom_layers.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rayleigh_channel.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/ray_plotting_results.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/tester.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range_plot.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh33_fixed_7dB.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician33_fixed_7dB.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_custom_layers.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh33_slow_varying_7dB.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_custom_layers.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_fixed_7dB.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_fixed_7dB.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/tester.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_slow_varying_7dB.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_slow_varying_7dB.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_awgn_channel.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="528" />
+    <option name="x" value="473" />
     <option name="y" value="23" />
-    <option name="width" value="873" />
+    <option name="width" value="875" />
     <option name="height" value="812" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -226,6 +243,20 @@
             <path>
               <item name="mit_eecs_research" type="b2602c69:ProjectViewProjectNode" />
               <item name="mit_eecs_research" type="462c0819:PsiDirectoryNode" />
+              <item name="communications_system" type="462c0819:PsiDirectoryNode" />
+              <item name="different_channel_filters" type="462c0819:PsiDirectoryNode" />
+              <item name="A_RAYLEIGH" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mit_eecs_research" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mit_eecs_research" type="462c0819:PsiDirectoryNode" />
+              <item name="communications_system" type="462c0819:PsiDirectoryNode" />
+              <item name="different_channel_filters" type="462c0819:PsiDirectoryNode" />
+              <item name="A_RICIAN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mit_eecs_research" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mit_eecs_research" type="462c0819:PsiDirectoryNode" />
               <item name="weight_evaluation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -239,6 +270,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -251,8 +287,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.convex_hull">
-    <configuration name="ae_visualization" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.A_awgn_channel">
+    <configuration name="A_awgn_channel" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mit_eecs_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,17 +296,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/ae_visualization.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_awgn_channel.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="autoencoder_range_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="rayleigh33_slow_varying_7dB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mit_eecs_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -278,17 +314,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range_plot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_slow_varying_7dB.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="centroid" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="rician_fixed_7dB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mit_eecs_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -296,17 +332,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/centroid.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_fixed_7dB.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="convex_hull" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="rician_slow_varying_7dB" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mit_eecs_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -314,17 +350,17 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/convex_hull.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_slow_varying_7dB.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="original" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tester" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="mit_eecs_research" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -332,30 +368,30 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/original.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/tester.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.autoencoder_range_plot" />
-      <item itemvalue="Python.ae_visualization" />
-      <item itemvalue="Python.original" />
-      <item itemvalue="Python.centroid" />
-      <item itemvalue="Python.convex_hull" />
+      <item itemvalue="Python.rayleigh33_slow_varying_7dB" />
+      <item itemvalue="Python.rician_fixed_7dB" />
+      <item itemvalue="Python.rician_slow_varying_7dB" />
+      <item itemvalue="Python.tester" />
+      <item itemvalue="Python.A_awgn_channel" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.convex_hull" />
-        <item itemvalue="Python.centroid" />
-        <item itemvalue="Python.ae_visualization" />
-        <item itemvalue="Python.original" />
-        <item itemvalue="Python.autoencoder_range_plot" />
+        <item itemvalue="Python.A_awgn_channel" />
+        <item itemvalue="Python.rician_slow_varying_7dB" />
+        <item itemvalue="Python.tester" />
+        <item itemvalue="Python.rician_fixed_7dB" />
+        <item itemvalue="Python.rayleigh33_slow_varying_7dB" />
       </list>
     </recent_temporary>
   </component>
@@ -373,18 +409,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="528" y="23" width="873" height="812" extended-state="0" />
+    <frame x="473" y="23" width="875" height="812" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.28865978" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24114285" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32882273" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.17208672" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32791328" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.2804878" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.13821138" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.3991881" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.11788618" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.398374" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -395,9 +432,9 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.26116374" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.18292683" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2718855" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.41687042" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -405,11 +442,11 @@
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.3991881" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.2909337" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.13821138" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32882273" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32791328" />
       <window_info id="Favorites" order="0" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -422,222 +459,157 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/Autoencoder_and_Classifier/autoencoder_classifier_revised3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/R_comparison33.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/Autoencoder_and_Classifier/autoencoder.py">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system_binary2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="277">
+          <caret line="104" column="25" lean-forward="true" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/Autoencoder_and_Classifier/autoencoder_classifier_revised2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/weight_evaluation/autoencoder_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/weight_evaluation/autoencoder_model2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#83#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/Autoencoder_and_Classifier/autoencoder_classifer_revised.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="4" selection-end-column="16" />
+        <state>
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_7_4_BER_matplotlib.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_custom_autoencoder6.npy">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_14_8_BER_matplotlib.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_14_12_BER_matplotlib.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_2_2_BER_matplotlib.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/auto_2_2.npy">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/Autoencoder_and_Classifier/autoencoder_and_classifer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        <state>
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/BPSK_AE_11_11.png">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="196" column="4" lean-forward="true" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/bpsk_rician_channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="34" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_bpsk_rayleigh_rician.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/Constellation_2_2.png">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_rayleigh_auto_3_3_7dB.npy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_original_autoencoder.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/Constellation_4_4.png">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_custom_autoencoder33.npy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_orignal_autoencoder33.npy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rayleigh_channel1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-665">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#83#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AutoEncoder_3_3_BER_matplotlib.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/BPSK_AE_3_3.png">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/rayleigh_auto_3_3_7dB.npy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_original_autoencoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="114" column="17" lean-forward="true" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/rayleigh_bpsk.npy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/bpsk_rayleigh channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_fixed_7dB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <element signature="e#83#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/ray_plotting_results.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="79" lean-forward="true" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="13" selection-start-line="21" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/binary_77.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/X_i_q_plot.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/high_dim_multi_SNR.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/high_dim_constellation_signal.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/Constellation_5_5.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/corrdinates.npy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1244" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/constellation_signal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
-          <folding>
-            <element signature="e#83#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/qam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/sigproc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#562#580#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_comm_system_log2Mdimension.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="129" column="22" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="22" />
-          <folding>
-            <element signature="e#83#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/t_modulation_scheme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/t_i_q_arr.npy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/t_8psk_constellation_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="116" column="16" selection-start-line="116" selection-end-line="117" />
-          <folding>
-            <element signature="e#402#587#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/XConstellation_4_4.png">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/BPSK_AE_9_9.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/XConstellation_6_6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/X_15db_i_q_arr.npy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/X_i_q_plot.py">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system_binary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/high_dim_constellation_signal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="e#26#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/high_dim_multi_SNR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#26#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/x_axis.npy">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/tester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/t_new_modulation_scheme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_dB_Range.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3466">
-          <caret line="553" column="29" selection-start-line="553" selection-start-column="29" selection-end-line="553" selection-end-column="29" />
+        <state relative-caret-position="423">
+          <caret line="143" column="3" selection-start-line="143" selection-start-column="3" selection-end-line="143" selection-end-column="3" />
           <folding>
             <element signature="e#83#101#0" expanded="true" />
           </folding>
@@ -646,113 +618,155 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="96" />
+        <state relative-caret-position="204">
+          <caret line="31" column="24" selection-start-line="31" selection-end-line="32" />
           <folding>
             <element signature="e#83#106#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system2.py">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_dB_Range.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_range_3_3_BER_matplotlib.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="148" column="4" lean-forward="true" selection-start-line="148" selection-start-column="4" selection-end-line="148" selection-end-column="4" />
+        <state relative-caret-position="232">
+          <caret line="20" column="84" selection-start-line="20" selection-start-column="84" selection-end-line="20" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="135" column="10" selection-start-line="135" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/A_rayleigh33_fixed_7dB.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/A_rayleigh33_slow_varying_7dB.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/A_rayleigh33_slow_varying_7dB.npy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_custom_layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_custom_layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-625">
+          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/R_rician_autoencoder33.npy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rician_channel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="137" column="51" lean-forward="true" selection-start-line="82" selection-end-line="137" selection-end-column="51" />
           <folding>
             <element signature="e#83#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range1.py">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_custom_layers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="193">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_range_plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rician_channel.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_rayleigh_channel.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_range3_3_BER_matplotlib.png">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/A_rician33_fixed_7dB.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/AutoEncoder_range_3_3_BER_matplotlib.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/autoencoder_communication_system.py">
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_fixed_7dB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="114" column="18" lean-forward="true" selection-end-line="146" selection-end-column="10" />
+        <state relative-caret-position="2130">
+          <caret line="142" column="10" selection-start-line="142" selection-start-column="10" selection-end-line="142" selection-end-column="10" />
+          <folding>
+            <element signature="e#83#101#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/ae_visualizatoin.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="93" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_fixed_7dB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="96" column="34" selection-start-line="96" selection-start-column="34" selection-end-line="96" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_slow_varying_7dB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="27" column="13" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_slow_varying_7dB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#26#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_awgn_channel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/three_d_ae_representation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="32" selection-end-line="137" />
+        <state relative-caret-position="208">
+          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding>
-            <element signature="e#25#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/ae_visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
-          <folding>
-            <element signature="e#25#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/centroid.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="116" column="50" lean-forward="true" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="50" />
-          <folding>
-            <element signature="e#25#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/original.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="106" column="10" selection-end-line="119" />
-          <folding>
-            <element signature="e#25#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/visualization/convex_hull.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
-          <folding>
-            <element signature="e#25#43#0" expanded="true" />
+            <element signature="e#83#93#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -15,7 +15,7 @@ from keras.optimizers import SGD
 import random as rn
 
 # defining parameters
-M = 8
+M = 512
 k = np.log2(M)
 k = int(k)
 print ('M:', M, 'k:', k)
@@ -33,23 +33,22 @@ for i in label:
 
 data = np.array(data)
 
-R = 3.0 / 3.0
-n_channel = 3
+R = 9.0 / 9.0
+n_channel = 9
 input_signal = Input(shape=(M,))
 encoded = Dense(M, activation='relu')(input_signal)
 encoded1 = Dense(n_channel, activation='linear')(encoded)
 encoded2 = BatchNormalization()(encoded1)
 
+
 EbNo_train = np.power(10, 0.7)  # coverted 7 db of EbNo
-#EbNo_train = EbNo_train.astype('float')
 alpha1 = pow((2 * R * EbNo_train), -0.5)
 encoded3 = GaussianNoise(alpha1)(encoded2)
-
+print('encoded3', encoded3)
 decoded = Dense(M, activation='relu')(encoded3)
 decoded1 = Dense(M, activation='softmax')(decoded)
 
 autoencoder = Model(input_signal, decoded1)
-# sgd = SGD(lr=0.001)
 autoencoder.compile(optimizer='adam', loss='categorical_crossentropy')
 
 autoencoder.summary()
@@ -130,9 +129,12 @@ import matplotlib as mpl
 mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 
-plt.plot(EbNodB_range, ber, linestyle='--', color='b', marker='o', label='Autoencoder(3,3)')
+plt.plot(EbNodB_range, ber, linestyle='--', color='b', marker='o', label='Autoencoder(6,6)')
 print(ber)
-np.save('auto_3_3', ber)
+import scipy.io
+
+scipy.io.savemat('orig_ae99_7dB.mat', mdict={'ber': ber})
+np.save('R_orignal_autoencoder9', ber)
 # plt.plot(EbNodB_range, ber, linestyle='', marker='o', color='r')
 # plt.plot(EbNodB_range, ber, linestyle='-', color = 'b')
 # plt.plot(list(EbNodB_range), ber_theory, 'ro-',label='BPSK BER')
@@ -143,5 +145,5 @@ plt.ylabel('Block Error Rate')
 plt.grid()
 plt.legend(loc='upper right', ncol=1)
 
-plt.savefig('AutoEncoder_3_3_BER_matplotlib')
+#plt.savefig('R_original_autoencoder')
 plt.show()

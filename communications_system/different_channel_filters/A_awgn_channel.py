@@ -5,6 +5,7 @@ Edited Version - Haijia
 """
 
 # importing libs# import
+import pdb
 import numpy as np
 import tensorflow as tf
 from keras.layers import Input, Dense, GaussianNoise
@@ -13,6 +14,7 @@ from keras import regularizers
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import SGD
 import random as rn
+from A_custom_layers import GaussianNoise1
 
 # defining parameters
 M = 8
@@ -39,19 +41,19 @@ input_signal = Input(shape=(M,))
 encoded = Dense(M, activation='relu')(input_signal)
 encoded1 = Dense(n_channel, activation='linear')(encoded)
 encoded2 = BatchNormalization()(encoded1)
+print('encoded 2', encoded2)
 
 EbNo_train = np.power(10, 0.7)  # coverted 7 db of EbNo
-#EbNo_train = EbNo_train.astype('float')
 alpha1 = pow((2 * R * EbNo_train), -0.5)
-encoded3 = GaussianNoise(alpha1)(encoded2)
-
+encoded3 = GaussianNoise1(alpha1)(encoded2)
+print('encoded3', encoded3)
 decoded = Dense(M, activation='relu')(encoded3)
 decoded1 = Dense(M, activation='softmax')(decoded)
 
 autoencoder = Model(input_signal, decoded1)
-# sgd = SGD(lr=0.001)
 autoencoder.compile(optimizer='adam', loss='categorical_crossentropy')
-
+intermediate_from_a = autoencoder.get_layer(2).output
+#print('NOTE', intermediate_from_a)
 autoencoder.summary()
 
 N_val = 1500
@@ -104,7 +106,7 @@ def frange(x, y, jump):
         x += jump
 
 
-EbNodB_range = list(frange(-10, 20, 0.5))
+EbNodB_range = list(frange(-10, 5, 0.5))
 ber = [None] * len(EbNodB_range)
 for n in range(0, len(EbNodB_range)):
     EbNo = 10.0 ** (EbNodB_range[n] / 10.0)
@@ -132,16 +134,5 @@ import matplotlib.pyplot as plt
 
 plt.plot(EbNodB_range, ber, linestyle='--', color='b', marker='o', label='Autoencoder(3,3)')
 print(ber)
-np.save('auto_3_3', ber)
-# plt.plot(EbNodB_range, ber, linestyle='', marker='o', color='r')
-# plt.plot(EbNodB_range, ber, linestyle='-', color = 'b')
-# plt.plot(list(EbNodB_range), ber_theory, 'ro-',label='BPSK BER')
+np.save('R_custom_autoencoder33', ber)
 
-plt.yscale('log')
-plt.xlabel('SNR Range')
-plt.ylabel('Block Error Rate')
-plt.grid()
-plt.legend(loc='upper right', ncol=1)
-
-plt.savefig('AutoEncoder_3_3_BER_matplotlib')
-plt.show()

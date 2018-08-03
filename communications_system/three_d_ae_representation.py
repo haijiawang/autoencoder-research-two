@@ -101,7 +101,7 @@ ax = fig.add_subplot(111, projection='3d')
 x_emb = encoder.predict(test_data)
 noise_std = np.sqrt(1/(2*R*EbNo_train))
 noise = noise_std * np.random.randn(N, n_channel)
-x_emb = x_emb + noise
+x_emb = x_emb
 #print (x_emb[0])
 x_x_emb = x_emb[:,0]
 np.save('x_axis', x_x_emb)
