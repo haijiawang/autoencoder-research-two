@@ -4,7 +4,7 @@ import numpy as np
 from numpy import sqrt
 import random
 n_channels = 3
-samp_size = 20
+samp_size = 10
 Kz = 4
 
 X_matrix = np.random.seed(2)

@@ -24,7 +24,7 @@ def frange(x, y, jump):
         yield x
         x += jump
 
-EbNodB_range = list(frange(-10, 20, 0.5))
+EbNodB_range = list(frange(-10, 5, 0.5))
 sum = np.zeros(len(EbNodB_range))
 
 for i in range(0, samp_size):
@@ -85,7 +85,7 @@ for i in range(0, samp_size):
     # create the decoder model
     decoder = Model(encoded_input, deco)
 
-    N = 100000
+    N = 10000
     test_label = np.random.randint(M, size=N)
     test_data = []
 

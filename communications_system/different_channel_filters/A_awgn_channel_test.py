@@ -15,6 +15,9 @@ from keras.layers.normalization import BatchNormalization
 from keras.optimizers import SGD
 import random as rn
 from A_custom_layers import GaussianNoise1
+from keras import backend as K
+import keras.callbacks
+
 
 # defining parameters
 M = 8
@@ -35,13 +38,15 @@ for i in label:
 
 data = np.array(data)
 
+t_list = [None]*100
 R = 3.0 / 3.0
 n_channel = 3
 input_signal = Input(shape=(M,))
 encoded = Dense(M, activation='relu')(input_signal)
 encoded1 = Dense(n_channel, activation='linear')(encoded)
 encoded2 = BatchNormalization()(encoded1)
-
+t_list.append(encoded2)
+#tf.check_numerics(tensor=encoded2, message='check', name=None)
 
 EbNo_train = np.power(10, 0.7)  # coverted 7 db of EbNo
 alpha1 = pow((2 * R * EbNo_train), -0.5)
@@ -54,6 +59,18 @@ autoencoder = Model(input_signal, decoded1)
 autoencoder.compile(optimizer='adam', loss='categorical_crossentropy')
 autoencoder.summary()
 
+from keras.models import load_model
+
+encoder = Model(input_signal, encoded2)
+test = encoder.layers[2].output
+print(test)
+
+encoded_input = Input(shape=(n_channel,))
+deco = autoencoder.layers[-2](encoded_input)
+deco = autoencoder.layers[-1](deco)
+# create the decoder model
+decoder = Model(encoded_input, deco)
+
 N_val = 1500
 val_label = np.random.randint(M, size=N_val)
 val_data = []
@@ -63,27 +80,29 @@ for i in val_label:
     val_data.append(temp)
 val_data = np.array(val_data)
 
+
+class Normalization(keras.callbacks.Callback):
+    def on_train_begin(self, encoder):
+        self.value = []
+
+    def on_batch_end(self, batch, encoder):
+        self.value.append(encoder.layers[2].output)
+
+call = Normalization()
 autoencoder.fit(data, data,
                 epochs=100,
                 batch_size=300,
                 verbose=2,
-                validation_data=(val_data, val_data))
+                validation_data=(val_data, val_data),
+                callbacks=[call])
+
+from keras import backend as K
+
+# output in test mode = 0
+
+# output in train mode = 1
 
 
-print('encoded2' )
-sess = tf.Session()
-print(sess.run(encoded2))
-
-from keras.models import load_model
-
-encoder = Model(input_signal, encoded2)
-
-encoded_input = Input(shape=(n_channel,))
-
-deco = autoencoder.layers[-2](encoded_input)
-deco = autoencoder.layers[-1](deco)
-# create the decoder model
-decoder = Model(encoded_input, deco)
 
 N = 400000
 test_label = np.random.randint(M, size=N)
@@ -122,6 +141,7 @@ for n in range(0, len(EbNodB_range)):
     nn = N
     noise = noise_std * np.random.randn(nn, n_channel)
     encoded_signal = encoder.predict(test_data)
+    print(test_data)
     final_signal = encoded_signal + noise
     pred_final_signal = decoder.predict(final_signal)
     pred_output = np.argmax(pred_final_signal, axis=1)
