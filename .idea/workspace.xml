@@ -71,8 +71,8 @@
       <file leaf-file-name="A_awgn_channel_unnormalized.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/A_awgn_channel_unnormalized.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="286">
+              <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
               <folding>
                 <element signature="e#75#85#0" expanded="true" />
               </folding>
@@ -197,13 +197,13 @@
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RICIAN/rician_custom_layers.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/A_RAYLEIGH/rayleigh_custom_layers.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/awgn_custom.py" />
-        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/tester.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/A_awgn_channel.py" />
         <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/A_awgn_channel_unnormalized.py" />
+        <option value="$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/tester.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="45" />
     <option name="y" value="23" />
     <option name="width" value="1538" />
@@ -422,7 +422,7 @@
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32791328" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.2804878" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.2804878" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="0" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
@@ -766,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/tester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/A_awgn_channel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1103">
@@ -783,10 +776,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/tester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../mit_eecs_research/communications_system/different_channel_filters/AWGN/A_awgn_channel_unnormalized.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+        <state relative-caret-position="286">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding>
             <element signature="e#75#85#0" expanded="true" />
           </folding>

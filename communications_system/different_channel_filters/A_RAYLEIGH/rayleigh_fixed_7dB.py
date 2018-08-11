@@ -8,7 +8,7 @@ from keras import regularizers
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import SGD
 import random as rn
-from rayleigh_custom_layers import Rayleigh, ch_matrix
+from rayleigh_custom_layers import Rayleigh, ch_matrix, BatchNormalization1, CustomNormalization
 import random
 import matplotlib as mpl
 mpl.use('TkAgg')
@@ -41,7 +41,8 @@ n_channel = 3
 input_signal = Input(shape=(M,))
 encoded = Dense(M, activation='relu')(input_signal)
 encoded1 = Dense(n_channel, activation='linear')(encoded)
-encoded2 = BatchNormalization()(encoded1)
+stddev= 1.0
+encoded2 = CustomNormalization(stddev)(encoded1)
 
 n = 7
 EbNo_train = np.power(10, n/10.0)  # coverted 7 db of EbNo
@@ -106,7 +107,7 @@ rx_symbol = 0
 det_symbol = 0
 nn = N
 
-EbNodB_range = list(frange(-10, 20, 0.5))
+EbNodB_range = list(frange(-2, 2, 0.5))
 ber = [None] * len(EbNodB_range)
 
 for n in range(0, len(EbNodB_range)):
@@ -130,6 +131,7 @@ for n in range(0, len(EbNodB_range)):
 
 
 
+np.save('test', encoded_signal)
 plt.plot(EbNodB_range, ber, linestyle='--', color='b', marker='o', label='Autoencoder(3,3)')
 np.save('A_rayleigh33_fixed_7dB', ber)
 scipy.io.savemat('A_rayleigh33_fixed_7dB.mat', mdict={'ber': ber})

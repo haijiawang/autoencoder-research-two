@@ -14,10 +14,10 @@ from keras import regularizers
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import SGD
 import random as rn
-from awgn_custom import BatchNormalizationCustom, encoded_value
+from awgn_custom import BatchNormalizationCustom, encoded_value, CustomNormalization
 
 # defining parameters
-M = 64
+M = 8
 k = np.log2(M)
 k = int(k)
 print ('M:', M, 'k:', k)
@@ -37,19 +37,17 @@ for i in label:
 
 data = np.array(data)
 
-R = 6.0 / 6.0
-n_channel = 6
+R = 3.0 / 3.0
+n_channel = 3
 for x in range(0,10):
     input_signal = Input(shape=(M,))
     encoded = Dense(M, activation='relu')(input_signal)
     encoded1 = Dense(n_channel, activation='linear')(encoded)
-    print('enc',encoded_value)
-    #print(tf.keras.backend.eval(encoded_value))
+    encoded2 = CustomNormalization(1.0)(encoded1)
 
     EbNo_train = np.power(10, 0.7)
     alpha1 = pow((2 * R * EbNo_train), -0.5)
-    encoded3 = GaussianNoise(alpha1)(encoded1)
-    print('encoded3', encoded3)
+    encoded3 = GaussianNoise(alpha1)(encoded2)
     decoded = Dense(M, activation='relu')(encoded3)
     decoded1 = Dense(M, activation='softmax')(decoded)
 

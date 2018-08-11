@@ -10,7 +10,7 @@ from keras import regularizers
 from keras import constraints
 from keras import backend as K
 from keras.legacy import interfaces
-
+import numpy as np
 
 encoded_value = []
 
@@ -227,3 +227,66 @@ class BatchNormalizationCustom(Layer):
 
     def find_encoded_value(self):
         return encoded_value
+
+
+
+class CustomNormalizationXX(Layer):
+    def __init__(self, stddev, **kwargs):
+        super(CustomNormalizationXX, self).__init__(**kwargs)
+        self.supports_masking = True
+        self.stddev = stddev
+
+
+    def call(self, inputs, training=None):
+        def normalized():
+            initial_m = K.mean(inputs)
+            initial_std = K.std(inputs)
+            m = 0.0
+            std = 1.0
+            var = 1.0
+            epsilon = 0.001
+            gamma = 8.0
+            beta = 1.0
+            return (((inputs - (m)) / (np.sqrt(var + epsilon)) * gamma)) + 0.0
+
+
+        return K.in_train_phase(normalized, inputs, training=training)
+
+    def get_config(self):
+        config = {'stddev': self.stddev}
+        base_config = super(CustomNormalizationXX, self).get_config()
+        return dict(list(base_config.items()) + list(config.items()))
+
+    def compute_output_shape(self, input_shape):
+        return input_shape
+
+
+
+class CustomNormalization(Layer):
+    def __init__(self, stddev, **kwargs):
+        super(CustomNormalization, self).__init__(**kwargs)
+        self.supports_masking = True
+        self.stddev = stddev
+
+
+    def call(self, inputs, training=None):
+        def normalized():
+            mean_x = K.mean(inputs)
+            var_x = K.var(inputs)
+            epsilon = 0.001
+
+
+            return (inputs - mean_x) / (K.sqrt(var_x + epsilon))
+
+        return K.in_train_phase(normalized, inputs, training=training)
+
+    def get_config(self):
+        config = {'stddev': self.stddev}
+        base_config = super(CustomNormalization, self).get_config()
+        return dict(list(base_config.items()) + list(config.items()))
+
+    def compute_output_shape(self, input_shape):
+        return input_shape
+
+
+
